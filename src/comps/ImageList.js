@@ -1,3 +1,5 @@
-export function ImageList(){
-    return <div>ImageList</div>;
+import React from "react";
+
+export function ImageList({ images }) {
+  return <div>ImageList {images.length}</div>;
 }
