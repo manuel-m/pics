@@ -1,9 +1,20 @@
-import React from 'react';
+import React from "react";
 
 import { searchImages } from "./api";
 
-searchImages();
+import { SearchBar } from "./comps/SearchBar";
 
-export function App(){
-    return <div>App</div>;
+// searchImages();
+
+export function App() {
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit} />
+    </div>
+  );
+
+  function handleSubmit(term) {
+    // console.log(term);
+    searchImages(term)
+  }
 }
