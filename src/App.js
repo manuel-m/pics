@@ -6,8 +6,6 @@ import { ImageList } from "./comps/ImageList";
 
 import { SearchBar } from "./comps/SearchBar";
 
-// searchImages();
-
 export function App() {
   const [images, setImages] = useState([]);
   return (
@@ -18,7 +16,6 @@ export function App() {
   );
 
   async function handleSubmit(term) {
-    // console.log(term);
     const fetchedImages = await searchImages(term);
     setImages(fetchedImages);
   }
