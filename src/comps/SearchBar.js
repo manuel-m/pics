@@ -1,11 +1,14 @@
+import "./SearchBar.css"
+
 import React from "react";
 import { useState } from "react";
 
 export function SearchBar({ onSubmit }) {
   const [term, setTerm] = useState("");
   return (
-    <div>
+    <div className="search-bar">
       <form onSubmit={handleFormSubmit}>
+        <label>Enter search</label>
         <input value={term} onChange={handleChange} />
       </form>
     </div>
